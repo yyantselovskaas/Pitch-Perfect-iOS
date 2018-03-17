@@ -13,7 +13,7 @@
         <!--Record Sounds View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Record Sounds View Controller" id="BYZ-38-t0r" customClass="ViewController" customModule="PitchPerfectYana" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Record Sounds View Controller" id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="PitchPerfectYana" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +41,6 @@
                                 <state key="normal" image="Stop"/>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hji-YD-lFm"/>
-                                    <segue destination="gOx-lK-vNg" kind="show" id="cf9-ZB-85I"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,16 +60,17 @@
                         <outlet property="recordButton" destination="4iN-gz-G0f" id="Sd2-1D-vK4"/>
                         <outlet property="recordingLabel" destination="dnX-nW-Lgj" id="HhT-oU-m3P"/>
                         <outlet property="stopRecordingButton" destination="1HP-iB-IMn" id="HaO-JV-RKm"/>
+                        <segue destination="gOx-lK-vNg" kind="show" identifier="stopRecording" id="gzp-O7-lnG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="372" y="33.733133433283363"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Sounds View Controller-->
         <scene sceneID="xC3-bg-LhO">
             <objects>
-                <viewController id="gOx-lK-vNg" sceneMemberID="viewController">
+                <viewController id="gOx-lK-vNg" customClass="PlaySoundsViewController" customModule="PitchPerfectYana" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hyq-Ja-RqH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
