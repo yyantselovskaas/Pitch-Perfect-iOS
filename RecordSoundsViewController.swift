@@ -28,7 +28,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @IBAction func recordAudio(_ sender: Any) {
-        recordingLabel.text = "Recording in Progress"
+        recordingLabel.text = "Recording in Progress..."
         stopRecordingButton.isEnabled = true
         recordButton.isEnabled = false
         
