@@ -34,7 +34,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnX-nW-Lgj">
                                 <rect key="frame" x="127" y="450.5" width="121" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1HP-iB-IMn">
@@ -54,7 +54,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.027450980392156862" green="0.23137254901960785" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="dnX-nW-Lgj" firstAttribute="centerX" secondItem="4iN-gz-G0f" secondAttribute="centerX" id="BTJ-nE-e3Z"/>
                             <constraint firstItem="dnX-nW-Lgj" firstAttribute="top" secondItem="4iN-gz-G0f" secondAttribute="bottom" constant="7.5" id="Z9h-oV-od5"/>
@@ -86,13 +86,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="BLv-ka-wXj">
-                                <rect key="frame" x="0.0" y="64" width="375" height="499"/>
+                                <rect key="frame" x="37.5" y="64" width="300" height="300"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wUg-xi-nMQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="166.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m72-1x-F3f" userLabel="Slow Button">
-                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="166.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="A5t-yT-pld"/>
+                                                </constraints>
                                                 <state key="normal" image="Slow"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="imageView.ContentMode">
@@ -104,7 +107,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aak-eL-wev" userLabel="Fast Button">
-                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="166.5"/>
+                                                <rect key="frame" x="150" y="0.0" width="150" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="F6k-z0-4OS"/>
+                                                </constraints>
                                                 <state key="normal" image="Fast"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="imageView.ContentMode">
@@ -118,10 +124,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aE5-y9-QQR">
-                                        <rect key="frame" x="0.0" y="166.5" width="375" height="166"/>
+                                        <rect key="frame" x="0.0" y="100" width="300" height="100"/>
                                         <subviews>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPK-8G-XKQ" userLabel="High Pitch Button">
-                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="166"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                 <state key="normal" image="HighPitch"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="imageView.ContentMode">
@@ -132,8 +138,25 @@
                                                     <action selector="playSoundForButton:" destination="gOx-lK-vNg" eventType="touchUpInside" id="uiz-oR-YIX"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6y-l1-Rcb" userLabel="Stop Button">
+                                                <rect key="frame" x="100" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="4Vn-Md-PrX"/>
+                                                </constraints>
+                                                <state key="normal" image="Pause">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="imageView.ContentMode">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="stopButtonPressed:" destination="gOx-lK-vNg" eventType="touchUpInside" id="Fd2-X7-B0A"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4x3-y2-Ynw" userLabel="Low Pitch Button">
-                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="166"/>
+                                                <rect key="frame" x="200" y="0.0" width="100" height="100"/>
                                                 <state key="normal" image="LowPitch"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="imageView.ContentMode">
@@ -147,10 +170,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EUd-Uk-Z2K">
-                                        <rect key="frame" x="0.0" y="332.5" width="375" height="166.5"/>
+                                        <rect key="frame" x="0.0" y="200" width="300" height="100"/>
                                         <subviews>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TyD-jC-EMJ" userLabel="Echo Button">
-                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="166.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
                                                 <state key="normal" image="Echo"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="imageView.ContentMode">
@@ -162,7 +185,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Svn-xs-aRm" userLabel="Reverb Button">
-                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="166.5"/>
+                                                <rect key="frame" x="150" y="0.0" width="150" height="100"/>
                                                 <state key="normal" image="Reverb"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="imageView.ContentMode">
@@ -177,31 +200,12 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6y-l1-Rcb" userLabel="Stop Button">
-                                <rect key="frame" x="155.5" y="583" width="64" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" id="K1T-Zv-Alw"/>
-                                    <constraint firstAttribute="height" constant="64" id="mYU-Ic-GH4"/>
-                                </constraints>
-                                <state key="normal" image="Stop"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="imageView.ContentMode">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="stopButtonPressed:" destination="gOx-lK-vNg" eventType="touchUpInside" id="Fd2-X7-B0A"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.0" green="0.23421865701675415" blue="0.30533623695373535" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="BLv-ka-wXj" firstAttribute="top" secondItem="qIo-Yu-vgt" secondAttribute="top" id="FCA-b5-FbW"/>
-                            <constraint firstItem="P6y-l1-Rcb" firstAttribute="centerX" secondItem="qIo-Yu-vgt" secondAttribute="centerX" id="SFC-9k-sU9"/>
-                            <constraint firstItem="qIo-Yu-vgt" firstAttribute="bottom" secondItem="P6y-l1-Rcb" secondAttribute="bottom" constant="20" id="eGu-mm-x4Y" userLabel="Safe Area.bottom = Stop Button.bottom + 20"/>
-                            <constraint firstItem="P6y-l1-Rcb" firstAttribute="top" secondItem="BLv-ka-wXj" secondAttribute="bottom" constant="20" id="g3Y-gi-X4f"/>
-                            <constraint firstItem="qIo-Yu-vgt" firstAttribute="trailing" secondItem="BLv-ka-wXj" secondAttribute="trailing" id="pJN-hr-ng0"/>
-                            <constraint firstItem="BLv-ka-wXj" firstAttribute="leading" secondItem="qIo-Yu-vgt" secondAttribute="leading" id="vta-Ds-y3b"/>
+                            <constraint firstItem="BLv-ka-wXj" firstAttribute="top" secondItem="qIo-Yu-vgt" secondAttribute="top" id="1Mb-sj-4Rf"/>
+                            <constraint firstItem="BLv-ka-wXj" firstAttribute="centerX" secondItem="Hyq-Ja-RqH" secondAttribute="centerX" id="Rpl-rX-yLO"/>
+                            <constraint firstItem="qIo-Yu-vgt" firstAttribute="bottom" secondItem="BLv-ka-wXj" secondAttribute="bottom" constant="300" id="dLY-nx-exa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qIo-Yu-vgt"/>
                     </view>
@@ -243,6 +247,7 @@
         <image name="Fast" width="90" height="90"/>
         <image name="HighPitch" width="90" height="90"/>
         <image name="LowPitch" width="90" height="90"/>
+        <image name="Pause" width="31" height="40"/>
         <image name="RecordButton" width="155" height="155"/>
         <image name="Reverb" width="90" height="90"/>
         <image name="Slow" width="90" height="90"/>
