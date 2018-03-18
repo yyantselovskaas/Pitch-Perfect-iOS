@@ -11,6 +11,10 @@ import AVFoundation
 
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     var audioRecorder: AVAudioRecorder!
 
     @IBOutlet weak var recordingLabel: UILabel!
@@ -26,9 +30,10 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         super.viewWillAppear(animated)
         print("ViewWillAppear called")
     }
+
     
     @IBAction func recordAudio(_ sender: Any) {
-        recordingLabel.text = "Recording in Progress..."
+        recordingLabel.text = "Recording in progress..."
         stopRecordingButton.isEnabled = true
         recordButton.isEnabled = false
         
@@ -50,7 +55,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBAction func stopRecording(_ sender: Any) {
         recordButton.isEnabled = true
         stopRecordingButton.isEnabled = false
-        recordingLabel.text = "Tap to Record"
         
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
