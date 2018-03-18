@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -223,6 +222,7 @@
                                     <color key="titleColor" red="0.0" green="0.62720550432222222" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="stopButtonPressed:" destination="gOx-lK-vNg" eventType="touchUpInside" id="VCe-3t-uuD"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="sqH-r9-PZw"/>
                                 </connections>
                             </button>
@@ -241,6 +241,7 @@
                     <connections>
                         <outlet property="chipmunkButton" destination="XPK-8G-XKQ" id="Ro1-cv-L6A"/>
                         <outlet property="echoButton" destination="TyD-jC-EMJ" id="pmJ-UR-PRr"/>
+                        <outlet property="newRecordingButton" destination="x78-pD-X96" id="sY6-dR-SDA"/>
                         <outlet property="rabbitButton" destination="aak-eL-wev" id="Tmc-fC-e1J"/>
                         <outlet property="reverbButton" destination="Svn-xs-aRm" id="u2I-kF-9ht"/>
                         <outlet property="snailButton" destination="m72-1x-F3f" id="cPm-XK-A0U"/>
@@ -282,7 +283,6 @@
         <image name="Stop" width="155" height="155"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gzp-O7-lnG"/>
         <segue reference="sqH-r9-PZw"/>
     </inferredMetricsTieBreakers>
 </document>
